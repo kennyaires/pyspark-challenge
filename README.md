@@ -1,2 +1,2 @@
 # pyspark-challenge
-Uso básico da biblioteca pyspark
+Uso da biblioteca pyspark do framework de bug data Apache Spark.
