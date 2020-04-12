@@ -2,7 +2,7 @@
 Operações de big data do framework Apache Spark utilizando a biblioteca pyspark.
 
 
-# Questões
+# questões
 
 **Qual o objetivo do comando cache em Spark?**
 A função do cache evita que haja repetitivos acessos ao disco em busca de recursos utilizados constantemente no ambiente Spark, carregando-os na memória para um rápido acesso. Por padrão, os RDD's são carregados de forma *lazy* - isto é, uma vez instanciado o RDD é apenas uma abstração de instruções para a sua manipulação -, somente ao chamar uma ação, há de fato uma coleta de dados do RDD instanciado anteriormente, o que é morado, e uma vez que pode-se reutilizar esse resultado no restante da aplicação, convém usar o cache para melhorar a performance.
@@ -11,9 +11,7 @@ A função do cache evita que haja repetitivos acessos ao disco em busca de recu
 Isso se deve à principal diferença em termos performáticos dos dois frameworks: o Spark executa processamento em memória RAM enquanto que o MapReduce possui escrita e leitura em disco rígido, que é comparavelmente muito mais lento.
 
 **Qual é a função do SparkContext?**
-```
 Trata-se de um objeto que é a instancialização de qualquer aplicação Spark, esse objeto possibilita o cliente a se conectar à um cluster Spark e criar RDD's seguindo as configurações passadas no momento da instancialização.
-```
 
 **Explique com suas palavras o que é Resilient​ ​Distributed​ ​Datasets​ (RDD).**
 São as estruturas de dados do framework Spark. RDD é um acrônimo para *Resilient Distributed Datasets*, é então uma coleção de dados tolerantes à falha que podem ser executadas em paralelo. Sua instância é por definição *lazy*, nela é carregada uma série de instruções para ações e transfomações para manipulação dos dados - como por exemplo as operações `map` e `reduce`.
