@@ -28,4 +28,37 @@ O algoritmo do `GroupByKey` transfere mais dados em suas operações do que o `r
 5.  counts.saveAsTextFile("hdfs://...")
 ```
 
-Na primeira linha, o RDD É instanciado a partir de um arquivo no ambiente da aplicação Spark. Na segunda linha, há o tratamento dos dados vindos do arquivo de texto, e então na linha seguinte, os dados são preparados para serem contabilizados - cada palavra, uma ocorrência -, e finalmente na quarta linha a operação de contabilizar por chave é realizada - reduzindo as repetidas ocorrências de uma palavra em um único elemento. Na linha 5 o resultado da operação é salvo em um arquivo no endereço especificado. 
+Na primeira linha, o RDD É instanciado a partir de um arquivo no ambiente da aplicação Spark. Na segunda linha, há o tratamento dos dados vindos do arquivo de texto, e então na linha seguinte, os dados são preparados para serem contabilizados - cada palavra, uma ocorrência -, e finalmente na quarta linha a operação de contabilizar por chave é realizada - reduzindo as repetidas ocorrências de uma palavra em um único elemento. Na linha 5 o resultado da operação é salvo em um arquivo no endereço especificado.
+
+# aplicação em pyspark
+
+Disponível no arquivo `app.py` deste repositório.
+Para inicia-lo, rodar no terminal `python app.py`
+
+Exemplo de retorno:
+```
+*** RESULTS ***
+                                                                                
+#1. Number of unique hosts: 137979 hosts
+                                                                                
+#2. Total of 404 errors: 20901
+
+#3. The top 5 most frequent URL's with 404 errors:
+  1. | "/pub/winvn/readme.txt" | 2004 responses
+  2. | "/pub/winvn/release.txt" | 1732 responses
+  3. | "/shuttle/missions/STS-69/mission-STS-69.html" | 683 responses
+  4. | "/shuttle/missions/sts-68/ksc-upclose.gif" | 428 responses
+  5. | "/history/apollo/a-001/a-001-patch-small.gif" | 384 responses
+
+#4. Number of 404 errors daily:
+ - 01/07/1995: 316 error responses
+ - 02/07/1995: 291 error responses
+...
+ - 29/08/1995: 420 error responses
+ - 30/08/1995: 571 error responses
+ - 31/08/1995: 526 error responses
+                                                                                
+#5. Total number of bytes sent: 65524314915 bytes
+
+*** END ***
+```
