@@ -99,6 +99,7 @@ def sum_all_bytes(rdd):
 
 
 if __name__ == "__main__":
+    """ Usage of f-Strings available only on python 3.6 versions or above  """
     print('\n*** RESULTS ***')
 
     # 1. Number of unique hosts
