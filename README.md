@@ -6,7 +6,7 @@ Operações de big data do framework Apache Spark utilizando a biblioteca pyspar
 
 **Qual o objetivo do comando cache em Spark?**
 
-A função do cache evita que haja repetitivos acessos ao disco em busca de recursos utilizados constantemente no ambiente Spark, carregando-os na memória para um rápido acesso. Por padrão, os RDD's são carregados de forma *lazy* - isto é, uma vez instanciado o RDD é apenas uma abstração de instruções para a sua manipulação -, somente ao chamar uma ação, há de fato uma coleta de dados do RDD instanciado anteriormente, o que é morado, e uma vez que pode-se reutilizar esse resultado no restante da aplicação, convém usar o cache para melhorar a performance.
+A função do cache evita que haja repetitivos acessos ao disco em busca de recursos utilizados constantemente no ambiente Spark, carregando-os na memória para um rápido acesso. Por padrão, os RDD's são carregados de forma *lazy* - isto é, uma vez instanciado o RDD é apenas uma abstração de instruções para a sua manipulação -, somente ao chamar uma ação, há de fato uma coleta de dados do RDD instanciado anteriormente, o que é demorado, e uma vez que se pode reutilizar esse resultado no restante da aplicação, convém usar o cache para melhorar a performance.
 
 **O mesmo código implementado em Spark é normalmente mais rápido que a implementação equivalente em MapReduce. Por quê?**
 
