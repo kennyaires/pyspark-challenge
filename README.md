@@ -33,7 +33,7 @@ O algoritmo do `GroupByKey` transfere mais dados em suas operações do que o `r
 5.  counts.saveAsTextFile("hdfs://...")
 ```
 
-Na primeira linha, o RDD É instanciado a partir de um arquivo no ambiente da aplicação Spark. Na segunda linha, há o tratamento dos dados vindos do arquivo de texto, e então na linha seguinte, os dados são preparados para serem contabilizados - cada palavra, uma ocorrência -, e finalmente na quarta linha a operação de contabilizar por chave é realizada - reduzindo as repetidas ocorrências de uma palavra em um único elemento. Na linha 5 o resultado da operação é salvo em um arquivo no endereço especificado.
+Na primeira linha, o RDD é instanciado a partir de um arquivo no ambiente da aplicação Spark. Na segunda linha, há o tratamento dos dados vindos do arquivo de texto, e então na linha seguinte, os dados são preparados para serem contabilizados - cada palavra, uma ocorrência -, e finalmente na quarta linha a operação de contabilizar por chave é realizada - reduzindo as repetidas ocorrências de uma palavra em um único elemento. Na linha 5 o resultado da operação é salvo em um arquivo no endereço especificado.
 
 # aplicação em pyspark
 
